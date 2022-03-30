@@ -1,0 +1,20 @@
+<mat-drawer-container #mode class="example-container" >
+    <mat-drawer class="drawer" #drawer mode="push">
+        <mat-list>
+            <mat-list-item ><button mat-flat-button routerLink="/add"(click)="drawer.toggle()"><mat-icon>add</mat-icon> Add User</button></mat-list-item>
+            <mat-list-item><button mat-flat-button routerLink="'/edit"><mat-icon>edit</mat-icon>Edit User</button></mat-list-item>
+            <mat-list-item><button mat-flat-button routerLink="/list"><mat-icon>list</mat-icon>User List</button> </mat-list-item>
+        </mat-list>
+
+    </mat-drawer>
+    <mat-drawer-content>
+      <button mat-raised-button (click)="drawer.toggle()"><mat-icon aria-hidden="false" aria-label="Example home icon">menu</mat-icon>
+      User Information
+     </button>
+    <div class="main-content">
+        <router-outlet></router-outlet>
+    </div>
+   
+    </mat-drawer-content>
+  </mat-drawer-container>
+  
